@@ -1,13 +1,11 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-#include <iomanip>
 #include "Level.h"
+#include "Functions.h"
+
 using namespace std;
 
 int main()
 {
-    Level level = Level(1);
-    level.levelcheck();
+	Level level = Level(1); // Creating level object
+
+    level.levelcheck(); // Running function
 }

@@ -6,21 +6,29 @@ int clevel = 1;
 Level::Level(int level) {
     switch (level) {
     case 1:
-        ofile.open("C:\\Users\\Home\\Documents\\Level1Q.txt");
+        ofile.open("Level1Q.txt");
         break;
     case 2:
-        ofile.open("C:\\Users\\Home\\Documents\\Level2Q.txt");
+        ofile.open("Level2Q.txt");
         break;
+    case 3:
+        ofile.open("Level3Q.txt");
+        break;
+    case 4:
+        ofile.open("Level4Q.txt");
     }
 }
     // Function to go through the individual level
 void Level::OLevel() {
+
     string question, cans, ans2, ans3, ans4, yourans;
+
     int score = 0; // Keep track of score
 
     cout << "Welcome to level " << clevel;
     cout << "\n\n";
     int qcount = 1; // Keep track of question number
+
 
     // Loop to go through the question txt file
     while (getline(ofile, question, '|')
@@ -28,14 +36,23 @@ void Level::OLevel() {
         && getline(ofile, ans2, '|')
         && getline(ofile, ans3, '|')
         && getline(ofile, ans4, '|')) {
-        cout << setfill('-') << setw(50) << "-" << setfill(' ') << endl; // Creates a line of '-' characters
-        cout << "Question " << qcount << ") " << question << "\n";
-        cout << "\n" << "a)" << cans << setw(25) << "b)" << ans2;
-        cout << "\nc)" << ans3 << setw(25) << "d)" << ans4;
-        cout << "\n\nWhat is your answer?\nAnswer: ";
-        cin >> yourans; // Reads in users answer
 
-                        // Verifies that the answer is the correct one and adds 10 points
+        //Declaring and initializing vector with the 4 different answers.
+        vector<string> answers;
+        answers.push_back(cans);
+        answers.push_back(ans2);
+        answers.push_back(ans3);
+        answers.push_back(ans4);
+
+        cout << "Question " << qcount << ") " << question << "\n";
+        
+        scrambleVector(answers);
+
+        cout << "\n\nWhat is your answer?\nAnswer: ";
+        // Reads in users answer
+        cin >> yourans; 
+
+       // Verifies that the answer is the correct one and adds 10 points
         if (yourans == cans) {
             cout << "\nCorrect answer!\n\n";
             score = score + 10;
@@ -49,6 +66,8 @@ void Level::OLevel() {
     if (score > 19) {
         cout << "You have completed the level with a score of: " << score;
         cout << "\nCongratulations you have passed level "<< clevel << "!\n\n";
+        // Creates a line of '-' characters
+        cout << setfill('-') << setw(50) << "-" << setfill(' ') << endl;
         clevel++; // Goes up one level
     }
     else if (score < 20) {
@@ -56,14 +75,16 @@ void Level::OLevel() {
     }
 }
 
-    //Function to verify current level and redo if not passed
+//Function to verify current level and redo if not passed
 void Level::levelcheck() {
-    Level level = Level(clevel); // Creates current level object
+    // Creates current level object
+    Level level = Level(clevel); 
 
     switch (clevel) {
     case 1: 
         level.OLevel();
-        level.levelcheck(); // Calls itself again to verify
+        // Calls itself again to verify
+        level.levelcheck();
         break;
 
     case 2:

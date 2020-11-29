@@ -4,14 +4,15 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+#include "Functions.h"
 using namespace std;
 
 extern int clevel;
 
 class Level {
-public:
+
 	ifstream ofile;
-	
+public:
 	//Constructer of level
 	Level(int level);
 
