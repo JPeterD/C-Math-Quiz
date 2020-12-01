@@ -1,2 +1,2 @@
 Which is closest to pi? |3.41|6.25|3.76|2.5|
-Which is the first number? |1|7|100|0|
+Which is the smallest number? |1|7|100|2|

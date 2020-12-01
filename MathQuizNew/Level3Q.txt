@@ -1,0 +1,2 @@
+What is three fifth's of 100? |60|5|20|3|
+What is the square of 15? |225|30|252|15|

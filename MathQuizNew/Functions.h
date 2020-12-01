@@ -4,6 +4,8 @@
 #include <random>
 #include <chrono>
 
-using namespace std;
+//Declares function that scrambles vector
+void scrambleVector(std::vector<std::string> list1);
 
-void scrambleVector(vector<string> list1);
+//Prints msg on quiz completion
+void completion(int curlevel);

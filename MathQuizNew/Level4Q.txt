@@ -1,0 +1,2 @@
+What is the value of x if x^2 = 169? |13|1|169|338|
+In a century how many months are there? |1200|120|12|12000|

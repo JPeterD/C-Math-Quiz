@@ -16,6 +16,7 @@ Level::Level(int level) {
         break;
     case 4:
         ofile.open("Level4Q.txt");
+        break;
     }
 }
     // Function to go through the individual level
@@ -29,6 +30,11 @@ void Level::OLevel() {
     cout << "\n\n";
     int qcount = 1; // Keep track of question number
 
+    //Checks if the file can be opened
+    if (!ofile) {
+        cerr << "Error opening file\nPlease check your file paths.";
+        exit(EXIT_FAILURE);
+    }
 
     // Loop to go through the question txt file
     while (getline(ofile, question, '|')
@@ -46,6 +52,7 @@ void Level::OLevel() {
 
         cout << "Question " << qcount << ") " << question << "\n";
         
+        //Calling function to randomize and display answers
         scrambleVector(answers);
 
         cout << "\n\nWhat is your answer?\nAnswer: ";
@@ -68,6 +75,7 @@ void Level::OLevel() {
         cout << "\nCongratulations you have passed level "<< clevel << "!\n\n";
         // Creates a line of '-' characters
         cout << setfill('-') << setw(50) << "-" << setfill(' ') << endl;
+
         clevel++; // Goes up one level
     }
     else if (score < 20) {
@@ -81,15 +89,15 @@ void Level::levelcheck() {
     Level level = Level(clevel); 
 
     switch (clevel) {
-    case 1: 
+    case 1:
+    case 2:
+    case 3:
+    case 4:
         level.OLevel();
-        // Calls itself again to verify
         level.levelcheck();
         break;
-
-    case 2:
-        level.OLevel();
-        level.levelcheck();
+    case 5:
+        completion(clevel);
         break;
     }
 }

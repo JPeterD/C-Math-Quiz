@@ -16,3 +16,12 @@ void scrambleVector(vector<string> list1)
 		cout << "#)" << list1[i] << "\n";
 	}
 }
+
+//Function prints statements once quiz is completed
+void completion(int curlevel)
+{
+	if (clevel == 5) {
+		cout << "Congratualations you have finished this Math Quiz well done to you!\n\n";
+		cout << "You deserve a round of applause!\n";
+	}
+}
