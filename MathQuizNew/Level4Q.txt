@@ -1,2 +1,5 @@
 What is the value of x if x^2 = 169? |13|1|169|338|
 In a century how many months are there? |1200|120|12|12000|
+The square root of 0.0081 is? |0.09|0.9|0.91|0.009|
+45% of 640 + 64% of 450 is equal to how much percent of 1440? |40|54|45|50|
+The value of 1.07 x 65 + 1.07 x 26 + 1.07 x 9 is? |107|10.73|104|10.7|

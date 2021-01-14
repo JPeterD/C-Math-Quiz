@@ -1,2 +1,5 @@
 Which is closest to pi? |3.41|6.25|3.76|2.5|
 Which is the smallest number? |1|7|100|2|
+How many odd numbers are there greater than 1,000 but less than 100,000? |49500|49950|49995|50000|
+How many odd six-digit whole numbers are there? |450000|499999|500000|999999|
+What does the Roman numeral "X" equal? |10|8|100|1|

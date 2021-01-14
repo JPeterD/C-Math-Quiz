@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+#include <sstream>
 #include <cstdlib>
 #include "Functions.h"
 
@@ -19,9 +20,12 @@ public:
 	//Constructer of level
 	Level(int level);
 
-	// Function to go through the individual level
+	//Method to go through the individual level
 	void OLevel();
 
-	//Function to verify current level and redo if not passed
+	//Method to verify current level and redo if not passed
 	void levelcheck();
+	
+	//Method to verify if level is passed.
+	void verifyScore(int scorecheck);
 };

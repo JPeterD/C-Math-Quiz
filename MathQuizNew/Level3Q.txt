@@ -1,2 +1,5 @@
 What is three fifth's of 100? |60|5|20|3|
 What is the square of 15? |225|30|252|15|
+What is the square root of 1506 correct to 1 decimal place. |38.8|38.9|39.5|40.1|
+How many equal sides do icosahedrons have? |20|15|10|25|
+How many sides does a dodecahedron have? |12|22|25|32|

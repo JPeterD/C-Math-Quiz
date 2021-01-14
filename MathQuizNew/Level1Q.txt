@@ -1,2 +1,5 @@
 What is 2+2? |4|2|5|7|
 What is 4*3? |12|9|7|11|
+Estimate the square root of 1239 to one decimal place. |35.2|35.1|11.1|35.3|
+Convert binary number 11010 to decimal. |26|25|27|28|
+20% of 2 is equal to? |0.4|20|4|0.04|
